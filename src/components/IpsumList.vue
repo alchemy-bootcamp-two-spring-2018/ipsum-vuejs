@@ -4,10 +4,10 @@
     <ul>
       <li
         v-for="ipsum in list"
-        v-bind:key="ipsum.author"
-        v-on:click="$emit('select', ipsum)"
+        :key="ipsum.author"
+        @click="$emit('select', ipsum)"
       >
-      <article v-bind:class="['ipsum', {selected: ipsum === selected }]">
+      <article :class="['ipsum', {selected: ipsum === selected }]">
         {{ipsum.title}}
       </article>
       </li>
@@ -28,9 +28,18 @@ export default {
 };
 </script>
 
-<style>
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
+<style scoped>
+div {
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li:hover {
+  background: #eee;
+  cursor: pointer;
+}
 </style>

@@ -14,6 +14,15 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+div {
+  padding: 10px;
+}
 
+div >>> img {
+  display: block;
+  max-height: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 </style>

@@ -6,12 +6,12 @@
     <main>
       <section class="list">
         <IpsumList
-          v-bind:selected="selected"
-          v-on:select="updateSelected"
+          :selected="selected"
+          @select="updateSelected"
         />
       </section>
       <section class="viewer">
-        <IpsumViewer v-bind:ipsum="selected"/>
+        <IpsumViewer :ipsum="selected"/>
       </section>
     </main>
   </div>
