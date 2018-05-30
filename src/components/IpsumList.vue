@@ -22,7 +22,7 @@ export default {
       list: ipsums
     }
   },
-
+  props: ['selected']
 };
 </script>
 

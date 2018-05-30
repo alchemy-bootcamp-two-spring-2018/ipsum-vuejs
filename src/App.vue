@@ -35,4 +35,19 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list {
+  max-width: 300px;
+  border: 1px solid blue;
+}
+
+.viewer {
+  border: 1px solid orange;
+}
 </style>
