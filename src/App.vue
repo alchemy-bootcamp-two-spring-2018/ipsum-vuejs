@@ -6,21 +6,21 @@
     </header>
     <main>
       <section class="list">
-        <PokemonList 
+        <IpsumList 
           v-bind:selected="selected"
           v-on:select="updateSelected"
         />
       </section>
       <section class="viewer">
-        <PokemonViewer v-bind:pokemon="selected"/>
+        <IpsumViewer v-bind:ipsumItem="selected"/>
       </section>
     </main>
   </div>
 </template>
 
 <script>
-import PokemonList from './components/IpsumList.vue';
-import PokemonViewer from './components/IpsumViewer.vue';
+import IpsumList from './components/IpsumList.vue';
+import IpsumViewer from './components/IpsumViewer.vue';
 export default {
   data() {
     return {
@@ -29,12 +29,12 @@ export default {
     }
   },
   components: {
-    PokemonList,
-    PokemonViewer
+    IpsumList,
+    IpsumViewer
   },
   methods: {
-    updateSelected(pokemon) {
-      this.selected = pokemon;
+    updateSelected(ipsumItem) {
+      this.selected = ipsumItem;
     }
   }
 };

@@ -1,8 +1,14 @@
 <template>
   <div>
-    <article class="pokemon-detail" v-if="pokemon">
-      <h3>{{pokemon.pokemon}}</h3>
-      <img v-bind:src="pokemon.url_image">
+    <article class="ipsum-detail" v-if="ipsumItem">
+      <h3>{{ipsumItem.title}}</h3>
+      <ul>
+        <li>Author: {{ipsumItem.author}}</li>
+        <li>Category: {{ipsumItem.category}}</li>
+        <li>Date Published: {{ipsumItem.publishedOn}}</li>
+        <li>URL: {{ipsumItem.authorUrl}}</li>
+      </ul>
+      <!-- <img v-bind:src="ipsumItem.url_image"> -->
     </article>
     <p v-else>Please select an Ipsum option</p>
   </div>
@@ -10,14 +16,14 @@
 
 <script>
 export default {
-  props: ['pokemon']
+  props: ['ipsumItem']
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.pokemon-detail {
+.ipsum-detail {
   padding: 10px;
-  text-align: center;
+  /* text-align: center; */
 }
 </style>

@@ -2,28 +2,28 @@
   <div>
     <h1>Ipsum Options ({{list.length}})</h1>
     <ul>
-      <li 
-        v-for="pokemon in list"
-        v-bind:key="pokemon.id"
-        v-on:click="$emit('select', pokemon)"
-      >
-        <article v-bind:class="['pokemon', { selected: pokemon === selected }]">
-          <img v-bind:src="pokemon.url_image">
-          <span v-bind:style="{ color: pokemon.color_1 }">
-            {{pokemon.pokemon}}
+      <li v-bind:class="['ipsumItem', { selected: ipsumItem === selected }]"
+        v-for="ipsumItem in list"
+        v-bind:key="ipsumItem.id"
+        v-on:click="$emit('select', ipsumItem)"
+      ><strong>{{ipsumItem.title}}</strong> - {{ipsumItem.category}}
+        <!-- <article v-bind:class="['ipsumItem', { selected: ipsumItem === selected }]">
+          <img v-bind:src="ipsumItem.url_image">
+          <span v-bind:style="{ color: ipsumItem.color_1 }">
+            {{ipsumItem.pokemon}}
           </span>
-        </article>
+        </article> -->
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import pokemon from '../pokemon.js';
+import ipsumList from '../data.js';
 export default {
   data() {
     return { 
-      list: pokemon 
+      list: ipsumList 
     }
   },
   props: ['selected']
@@ -45,23 +45,23 @@ li {
 a {
   color: #42b983;
 }
-.pokemon {
+.ipsumItem {
   display: flex;
   align-items: center;
   padding: 5px;
   cursor: pointer;
 }
-.pokemon.selected {
+.ipsumItem.selected {
   background: antiquewhite;
 }
-.pokemon.selected:hover {
+.ipsumItem.selected:hover {
   background: wheat;
 }
-.pokemon:hover {
+.ipsumItem:hover {
   background: steelblue;
 }
-.pokemon img {
+/* .ipsumItem img {
   width: 75px;
   margin-right: 5px;
-}
+} */
 </style>
