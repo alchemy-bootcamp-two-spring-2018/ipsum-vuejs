@@ -1,9 +1,9 @@
-Vue: Ipsum Viewer
+VueJS: Ipsum Viewer
 ===
 
 ## Code Wars Challenge
 
-Complete [today's Kata.](https://www.codewars.com/kata/fixme-replace-all-dots)
+Complete [today's Kata](https://www.codewars.com/kata/my-head-is-at-the-wrong-end).
 
 ## Lab
 
@@ -18,8 +18,6 @@ Your app components should be structured as follows (notice new `Ipsum` componen
 App
   |
   + IpsumList
-  |   |
-  |   + Ipsum
   |
   + IpsumViewer
 ```
@@ -27,25 +25,22 @@ App
 ## Component Details
 
 * `App` 
-    * owns the "selected" state (initially `null`)
-    * passes `IpsumList` a callback function, `onSelect`
-    * displays the two child components
+    * owns the "selected" state (initially `null`), which is passed to both `IpsumList` and `IpsumViewer`
+    * subsribes to `IpsumList` event `select`. Updates the selected state.
+    * displays the two child components, passes `selected` prop to `IpsumViewer`
 * `IpsumList`
-    * owns the "ipsum list" state (initially import of `js/data.js`)
-    * calls the passed `onSelect` when an ipsum is selected, _passing the corresponding object_ to the `onSelect` function
-    * show name and category (maybe find images?)
-* `Ipsum`
-    * owns the "ipsum list" state (initially import of `js/data.js`)
-    * calls the passed `onSelect` when an ipsum is selected, _passing the corresponding object_ to the `onSelect` function
-    * show name and category (maybe find images?)
+    * Owns the "ipsum list" state (initially import of `js/data.js`) which it returns from `data() {}`
+    * Emits the `select` event, _passing the corresponding ipsum object_ when item is clicked
+    * Show name and category (maybe find images based on category?). Conditional add class to indicate ipsum is selected
 * `IpsumViewer`
-    * gets passed the `selected` (only via `update`)
+    * gets passed the `selected` via `props`
     * if `selected` is `null` displays message to make a selection
+    * else shows detail view
 
 ## Requirements
 
 * Use Vue CLI to create project (choose "merge" option)
-* Move `data.js` to appropriate place in project
+* Move `data.js` to appropriate place in project and maybe name `ipsums.js`
 * Use single-file vue components
 
 ## Rubric
