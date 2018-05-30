@@ -44,9 +44,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 60px;
+  display: grid;
+  grid-template-rows: 20% 20% 20% 20% 20% ;
+  grid-template-columns: 20% 70% 10%;
+}
+
+#list {
+  width: 300px;
+  grid-area: 1 / 1 / 6 / 1;
 }
 
 #viewer {
-  float: right;
+  grid-area: 1 / 2 / 6 / 6;
 }
+
 </style>
