@@ -7,11 +7,11 @@
         <section class="list">
             <IpsumList
             v-bind:selected="selected"
-            v-on:select="logConsole"
+            v-on:select="UpdateSelected"
             />
         </section>
         <section class="viewer">
-\            <IpsumViewer/>
+            <IpsumViewer v-bind:ipsum="selected"/>
         </section>
     </main>
 
@@ -33,9 +33,9 @@ export default {
         IpsumViewer
     },
     methods: {
-        logConsole(selected) {
-            this.selected = selected
-            console.log(this.selected);
+        UpdateSelected(ipsum) {
+            this.selected = ipsum;
+            console.log(this.selected.author);
         }
     }
 };
