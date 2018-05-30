@@ -5,7 +5,10 @@
     </header>
     <main>
       <section id="list">
-        <IpsumList/>
+        <IpsumList
+          v-bind:selected="selected"
+          v-on:select="updateSelected"
+        />
       </section>
       <section>
         <IpsumViewer/>
@@ -28,6 +31,11 @@ export default {
   components: {
     IpsumList,
     IpsumViewer
+  },
+  methods: {
+    updateSelected(ipsum) {
+      console.log(ipsum.title);
+    }
   }
 }
 </script>

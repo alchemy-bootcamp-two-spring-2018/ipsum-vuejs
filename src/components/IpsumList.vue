@@ -5,6 +5,7 @@
       <li
         v-for="ipsum in ipsumList"
         v-bind:key="ipsum.id"
+        v-on:click="$emit('select', ipsum)"
       >
       {{ ipsum.title }}
       </li>
@@ -21,9 +22,7 @@ export default {
       ipsumList: ipsumList
     }
   },
-  props: {
-    
-  }
+  props: ['selected']
 }
 </script>
 
