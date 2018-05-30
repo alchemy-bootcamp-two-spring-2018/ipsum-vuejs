@@ -31,6 +31,9 @@ export default {
     
   },
   methods: {
+    updateSelected(pokemon) {
+      this.selected = pokemon;
+    }
 
   }
 }

@@ -26,8 +26,8 @@ export default {
         return {
             list: pokemon
         }
-    }
-    // props: ['selected']
+    },
+    props: ['selected']
 };
 </script>
 
