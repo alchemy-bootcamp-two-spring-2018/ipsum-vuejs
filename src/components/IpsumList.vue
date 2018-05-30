@@ -5,7 +5,7 @@
       <li
       v-for="ipsum in list"
       :key="ipsum.author"
-      v-on:click="$emit('select', ipsum)"
+      @click="$emit('select', ipsum)"
 
       >{{ ipsum.title }}</li>
     </ul>
