@@ -43,19 +43,19 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: monospace;
   text-align: center;
   margin-top: 50px;
 }
-
+.viewer {
+  display: inline-block;
+  height: 700px;
+}
 
 .list {
   float: left;
-  float: left;
   overflow-y: auto;
   height: 700px;
-  max-width: 30%;
+  max-width: 35%;
 }
 </style>
