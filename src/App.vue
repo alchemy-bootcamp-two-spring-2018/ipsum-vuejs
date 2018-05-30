@@ -5,10 +5,13 @@
     </header>
     <main>
         <section class="list">
-            <IpsumList/>
+            <IpsumList
+            v-bind:selected="selected"
+            v-on:select="logConsole"
+            />
         </section>
         <section class="viewer">
-            viewer section
+\            <IpsumViewer/>
         </section>
     </main>
 
@@ -17,11 +20,23 @@
 
 <script>
 import IpsumList from './components/IpsumList.vue';
+import IpsumViewer from './components/IpsumViewer.vue';
 
 export default {
-    
+    data() {
+        return {
+            selected: null
+        }
+    },
     components: {
-        IpsumList
+        IpsumList,
+        IpsumViewer
+    },
+    methods: {
+        logConsole(selected) {
+            this.selected = selected
+            console.log(this.selected);
+        }
     }
 };
 
