@@ -37,7 +37,7 @@ h1 {
 
 ul {
    list-style-type: none;
-   height: 600px;
+   height: 638px;
    overflow-y: auto;
 }
 
