@@ -1,17 +1,38 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <IpsumList msg="Ipsum Viewer"/>
+    <section class="list">
+      <IpsumList
+        :selected="selected"
+        @:select="updateSelected"
+      />
+    </section>
+    <section class="viewer">
+      <IpsumViewer
+      :ipsum="selected"
+      />
+    </section>
   </div>
 </template>
 
 <script>
 import IpsumList from './components/IpsumList.vue'
+import IpsumViewer from './components/IpsumViewer.vue'
 
 export default {
   name: 'app',
+  data() {
+    return {
+      selected:null,
+    }
+  },
   components: {
-    IpsumList
+    IpsumList,
+    IpsumViewer,
+  },
+  methods: {
+    updateSelected(ipsum) {
+      this.selected = ipsum;
+    }
   }
 }
 </script>
@@ -21,7 +42,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }

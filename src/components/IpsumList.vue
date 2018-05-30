@@ -1,9 +1,11 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>List of Ipsums ({{list.length}})</h1>
     <ul>
       <li
       v-for="ipsum in list"
+      :key="ipsum.author"
+      @click="$emit('select', ipsum)"
       >{{ ipsum.title }}</li>
     </ul>
   </div>
@@ -18,10 +20,6 @@ export default {
       list: ipsum
     }
   },
-
-  props: {
-    msg: String
-  }
 }
 </script>
 
