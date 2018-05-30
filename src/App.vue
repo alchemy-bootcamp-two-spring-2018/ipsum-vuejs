@@ -1,16 +1,34 @@
 <template>
   <div id="app">
-     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <h1>Lorem Ipsum Selector</h1>
+    </header>
+    
+
+
+
+
+
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import IpsumList from './components/IpsumList.vue'
+import IpsumViewer from './components/IpsumViewer.vue'
+
 
 export default {
   name: 'app',
+
   components: {
-    HelloWorld
+    IpsumList,
+    IpsumViewer
+  },
+  methods: {
+    updateSelected(ipsum) {
+      this.selected = ipsum;
+    }
   }
 }
 </script>
