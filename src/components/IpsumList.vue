@@ -3,23 +3,25 @@
     <h1>{{list.length}} Ipsums</h1>
     <ul>
       <li
-        v-for="ipsums in list"
-        v-bind:key="ipsums.author"
-        v-on:click="$emit('select', ipsums)"
+        v-for="ipsum in list"
+        v-bind:key="ipsum.author"
+        v-on:click="$emit('select', ipsum)"
       >
-      <article>{{ipsums.title}}</article>
+      <article v-bind:class="['ipsum', {selected: ipsum === selected }]">
+        {{ipsum.title}}
+      </article>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import ipsums from '../data.js';
+import ipsum from '../ipsums.js';
 
 export default {
   data() {
     return {
-      list: ipsums
+      list: ipsum
     }
   },
   props: ['selected']
