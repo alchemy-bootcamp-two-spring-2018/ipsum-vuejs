@@ -1,17 +1,37 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <h1>Ipsum Viewer</h1>
+    </header>
+    <main>
+      <section class="ipsum-list">
+        <IpsumList
+          v-bind:selected="selected"
+
+        />
+      </section>
+      <section class="ipsum-viewer">
+        <IpsumViewer
+          v-bind:ispum="selected"
+        />
+      </section>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import IpsumList from './components/IpsumList.vue'
+import IpsumViewer from './components/IpsumViewer.vue'
 
 export default {
-  name: 'app',
+  data() {
+    return {
+    
+    }
+  },
   components: {
-    HelloWorld
+    IpsumList,
+    IpsumViewer
   }
 }
 </script>
@@ -26,3 +46,24 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+
+<!--
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style> 
+-->
