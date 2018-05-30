@@ -3,13 +3,32 @@
     <h1>Select An Ipsum To Preview:</h1>
     <ul>
       <li 
-          v-for="title in list"
-          v-bind:key="title"
-          v-on:click="$emit('select', title)"
+          v-for="ipsum in ipsumList"
+          v-bind:key="ipsum.title"
+          v-on:click="$emit('selected', ipsum)"
+          v-bind:class="['ipsum', { selected: ipsum === selected }]"
       >
-        <article v-bind:class="['title', { selected: title === selected }]">
-        </article>
+      {{ ipsum.title }}
       </li>
     </ul>
   </div>
 </template>
+
+<script>
+import ipsumList from '../data.js';
+
+export default {
+  data() {
+    return { ipsumList };
+  },
+  props: ['selected']
+};
+</script>
+
+<style>
+h1 {
+  padding: 10px 20px;
+}
+
+
+</style>

@@ -11,7 +11,7 @@
         />
       </section>
       <section class="viewer">
-        <IpsumViewer v-bind:ipsum="selected"/>
+      <IpsumViewer v-bind:ipsum="selected"/> 
       </section>
     </main>
   </div>
@@ -45,14 +45,14 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
-  color: #2c3e50;
+  color: #9e0470;
   margin-top: 60px;
 }
 
 .list {
   float: left;
   max-width: 500px;
-  background: rgb(101, 79, 110);
+  background: rgb(209, 188, 216);
 }
 
 .viewer {
