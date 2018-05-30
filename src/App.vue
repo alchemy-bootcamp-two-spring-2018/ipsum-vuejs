@@ -1,28 +1,63 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
+    <header>
+      <h1>Pokemon Directory</h1>
+    </header>
+
+    <main>
+      <section class="list">
+        <PokemonList
+          v-on:select="updateSelected"
+          v-bind:selected="selected"
+        />
+      </section>
+
+      <section class="detail-viewer">
+        <PokemonViewer
+        v-bind:pokemon="selected"
+        />
+      </section>
+    </main>
+
   </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PokemonList from './components/PokemonList.vue';
+import PokemonViewer from './components/PokemonViewer.vue';
 
 export default {
-  name: 'app',
+
+  data() {
+    return {
+      selected: null
+    }
+  },
+
   components: {
-    HelloWorld
+    PokemonList,
+    PokemonViewer
+  },
+
+  methods: {
+    updateSelected(pokemon) {
+      this.selected = pokemon;
+    }
   }
-}
+};
+
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+h1 {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
 </style>
