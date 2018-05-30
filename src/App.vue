@@ -7,12 +7,12 @@
       <section class="ipsum-list">
         <IpsumList
           v-bind:selected="selected"
-          v-on:select="updateSelected"
+          v-on:selected="updateSelected"
         />
       </section>
       <section class="ipsum-viewer">
         <IpsumViewer
-          v-bind:ispum="selected"
+          v-bind:ipsum="selected"
         />
       </section>
     </main>
@@ -26,8 +26,8 @@ import IpsumViewer from './components/IpsumViewer.vue'
 export default {
   data() {
     return {
-    
-    }
+      selected: null
+    };
   },
   components: {
     IpsumList,

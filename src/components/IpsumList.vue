@@ -1,13 +1,13 @@
 <template>
   <div>
-    <h1>List of Ipsums ({{list.length}})</h1>
+    <h1>List of Ipsums</h1>
     <ul>
       <li
         v-for="ipsum in list"
         v-bind:key="ipsum.title"
-        v-on:click="$emit('select', ipsum)"
+        v-on:click="$emit('selected', ipsum)"
       >
-        <section v-bind:class="['ipsum', {selected: pokemon === selected}]">
+        <section v-bind:class="['ipsum', {selected: ipsum === selected}]">
           <span>{{ipsum.title}}</span>
         </section>
       </li>
@@ -25,7 +25,7 @@ export default {
     }
   },
   props: ['selected']
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
