@@ -2,8 +2,8 @@
   <div id="app">
     <section class="list">
       <IpsumList
-        :selected="selected"
-        @:select="updateSelected"
+        v-bind:selected="selected"
+        v-on:select="updateSelected"
       />
     </section>
     <section class="viewer">
@@ -44,5 +44,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#viewer {
+  float: right;
 }
 </style>

@@ -5,7 +5,8 @@
       <li
       v-for="ipsum in list"
       :key="ipsum.author"
-      @click="$emit('select', ipsum)"
+      v-on:click="$emit('select', ipsum)"
+
       >{{ ipsum.title }}</li>
     </ul>
   </div>
@@ -20,12 +21,16 @@ export default {
       list: ipsum
     }
   },
+
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.selected{
+  color:red;
+}
 h3 {
   margin: 40px 0 0;
 }

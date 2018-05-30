@@ -2,7 +2,10 @@
   <div>
       <article v-if='ipsum'>
           <h3>{{ipsum.title}}</h3>
-          {{ipsum.body}}
+          <p v-html='ipsum.body'>
+              <!-- {{ipsum.body}} -->
+              </p>
+              
       </article>
     <p v-else>Please select a lorem ipsum to sample</p>
   </div>
