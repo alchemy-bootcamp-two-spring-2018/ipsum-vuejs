@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Ipsum Viewer</h1>
+    <IpsumList/>
+    <IpsumViewer/>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import IpsumList from './components/IpsumList.vue'
+import IpsumViewer from './components/IpsumViewer.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    IpsumList,
+    IpsumViewer
   }
 }
 </script>
