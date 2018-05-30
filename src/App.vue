@@ -53,10 +53,11 @@ export default {
 
 main {
   display: flex;
+  justify-content: center;
 }
 
 .list {
-  /* max-height: 800px;
-  overflow: auto; */
+  min-width: 430px;
 }
+
 </style>
