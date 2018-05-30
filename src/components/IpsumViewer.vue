@@ -3,12 +3,12 @@
     <article class="ipsum-detail" v-if="ipsumItem">
       <h3>{{ipsumItem.title}}</h3>
       <ul>
-        <li>Author: {{ipsumItem.author}}</li>
-        <li>Category: {{ipsumItem.category}}</li>
-        <li>Date Published: {{ipsumItem.publishedOn}}</li>
-        <li>URL: {{ipsumItem.authorUrl}}</li>
+        <li><strong>Author: </strong>{{ipsumItem.author}}</li>
+        <li><strong>Category: </strong>{{ipsumItem.category}}</li>
+        <li><strong>Date Published: </strong>{{ipsumItem.publishedOn}}</li>
+        <li><strong>URL: </strong><a v-bind:href="ipsumItem.authorUrl">{{ipsumItem.authorUrl}}</a></li>
       </ul>
-      <!-- <img v-bind:src="ipsumItem.url_image"> -->
+      <p v-html="ipsumItem.body"></p>
     </article>
     <p v-else>Please select an Ipsum option</p>
   </div>
@@ -22,8 +22,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.ipsum-detail {
-  padding: 10px;
-  /* text-align: center; */
+
+ul {
+  list-style: none;
 }
+
+/* it completely ignores my image styling.  Something about being in v-html? */
+p img {
+  width: 200px;
+}
+
+p {
+  text-align: justify;
+}
+
 </style>

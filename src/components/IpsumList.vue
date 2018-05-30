@@ -6,13 +6,7 @@
         v-for="ipsumItem in list"
         v-bind:key="ipsumItem.id"
         v-on:click="$emit('select', ipsumItem)"
-      ><strong>{{ipsumItem.title}}</strong> - {{ipsumItem.category}}
-        <!-- <article v-bind:class="['ipsumItem', { selected: ipsumItem === selected }]">
-          <img v-bind:src="ipsumItem.url_image">
-          <span v-bind:style="{ color: ipsumItem.color_1 }">
-            {{ipsumItem.pokemon}}
-          </span>
-        </article> -->
+      ><strong>{{ipsumItem.title}}</strong>: {{ipsumItem.category}}
       </li>
     </ul>
   </div>
@@ -42,26 +36,20 @@ ul {
 li {
   margin: 0 10px;
 }
-a {
-  color: #42b983;
-}
+
 .ipsumItem {
   display: flex;
-  align-items: center;
   padding: 5px;
   cursor: pointer;
 }
 .ipsumItem.selected {
-  background: antiquewhite;
+  background: white;
 }
 .ipsumItem.selected:hover {
-  background: wheat;
+  background: lavenderblush;
 }
 .ipsumItem:hover {
-  background: steelblue;
+  background: lightcyan;
 }
-/* .ipsumItem img {
-  width: 75px;
-  margin-right: 5px;
-} */
+
 </style>
