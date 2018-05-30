@@ -55,11 +55,11 @@ main {
 }
 
 .list {
-  max-width: 300px;
   border: 1px solid blue;
 }
 
 .viewer {
   border: 1px solid orange;
+  width: 60%;
 }
 </style>
