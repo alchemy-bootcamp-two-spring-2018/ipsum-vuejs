@@ -11,6 +11,7 @@
         />
       </section>
       <section class="viewer">
+        <PokemonViewer v-bind:pokemon="selected"/>
       </section>
     </main>
   </div>
@@ -18,6 +19,7 @@
 
 <script>
 import PokemonList from './components/PokemonList.vue';
+import PokemonViewer from './components/PokemonViewer.vue';
 
 export default {
   data() {
@@ -28,7 +30,7 @@ export default {
   },
   components: {
     PokemonList,
-    
+    PokemonViewer
   },
   methods: {
     updateSelected(pokemon) {
