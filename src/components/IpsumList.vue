@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>List of Pokemon ({{list.length}})</h1>
+    <h1>Ipsum Options ({{list.length}})</h1>
     <ul>
       <li 
         v-for="pokemon in list"

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <header>
-      <h1>Pokemon Viewer</h1>
-      <p v-html="someHtml"></p>
+      <h1>Ipsum Options</h1>
+      <!-- <p v-html="someHtml"></p> -->
     </header>
     <main>
       <section class="list">
@@ -19,13 +19,13 @@
 </template>
 
 <script>
-import PokemonList from './components/PokemonList.vue';
-import PokemonViewer from './components/PokemonViewer.vue';
+import PokemonList from './components/IpsumList.vue';
+import PokemonViewer from './components/IpsumViewer.vue';
 export default {
   data() {
     return {
       selected: null,
-      someHtml: '<strong>hello</strong>'
+      // someHtml: '<strong>hello</strong>'
     }
   },
   components: {

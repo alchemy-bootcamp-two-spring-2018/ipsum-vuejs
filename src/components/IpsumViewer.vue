@@ -4,7 +4,7 @@
       <h3>{{pokemon.pokemon}}</h3>
       <img v-bind:src="pokemon.url_image">
     </article>
-    <p v-else>Please select a pokemon</p>
+    <p v-else>Please select an Ipsum option</p>
   </div>
 </template>
 
