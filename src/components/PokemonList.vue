@@ -5,8 +5,9 @@
         <li
           v-for="pokemon in list"
           v-bind:key="pokemon.id"
+          v-on:click="$emit('select', pokemon)"
         >
-        <div class="pokemon-li">
+        <div>
           <img v-bind:src="pokemon.url_image">
           {{pokemon.pokemon}}
         </div>
@@ -30,12 +31,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.pokemon-li {
-  display: flex;
-  align-items: center;
+ul {
+   list-style-type: none;
 }
 
-.pokemon-li img {
+li {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+img {
   width: 100px;
   padding-right: 15px;
 }

@@ -5,20 +5,38 @@
     </header>
     <main>
       <section class="list">
-        <PokemonList/>
+        <PokemonList
+          v-bind:selected="selected"
+          v-on:select="updateSelected"
+        />
       </section>
-      <section class="viewer"></section>
+      <section class="viewer">
+        <PokemonViewer v-bind:pokemon="selected"/>
+      </section>
     </main>
   </div>
 </template>
 
 <script>
 import PokemonList from './components/PokemonList.vue';
+import PokemonViewer from './components/PokemonViewer.vue';
 
 export default {
-  name: 'app',
+  data() {
+    return {
+      selected: null
+    }
+  },
+
   components: {
-    PokemonList
+    PokemonList,
+    PokemonViewer
+  },
+
+  methods: {
+    updateSelected(pokemon) {
+      this.selected = pokemon;
+    }
   }
 }
 </script>
@@ -31,6 +49,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+main {
+  display: flex;
 }
 
 .list {
