@@ -1,11 +1,18 @@
 <template>
   <div class="list">
-    <h2>Ipsum List</h2>
+    <h2>Ipsum List {{ ipsumList.length }}</h2>
   </div>
 </template>
 
 <script>
+import ipsumList from '../../data.js';
+
 export default {
+  data() {
+    return {
+      ipsumList: ipsumList
+    }
+  },
   props: {
     
   }

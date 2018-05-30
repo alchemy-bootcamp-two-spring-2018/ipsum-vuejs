@@ -1,8 +1,16 @@
 <template>
   <div id="app">
-    <h1>Ipsum Viewer</h1>
-    <IpsumList/>
-    <IpsumViewer/>
+    <header>
+      <h1>Ipsum Viewer</h1>
+    </header>
+    <main>
+      <section id="list">
+        <IpsumList/>
+      </section>
+      <section>
+        <IpsumViewer/>
+      </section>
+    </main>
 
   </div>
 </template>
@@ -12,7 +20,11 @@ import IpsumList from './components/IpsumList.vue'
 import IpsumViewer from './components/IpsumViewer.vue'
 
 export default {
-  name: 'app',
+  data() {
+    return {
+      selected: null
+    }
+  },
   components: {
     IpsumList,
     IpsumViewer
