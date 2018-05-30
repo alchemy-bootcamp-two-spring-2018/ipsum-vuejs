@@ -5,6 +5,7 @@
     </header>
     <main>
         <section class="list">
+            <IpsumList/>
             list section
         </section>
         <section class="viewer">
@@ -16,13 +17,15 @@
 </template>
 
 <script>
-// export default {
-//     data() {
-//         return {
-//             selected
-//         }
-//     }
-// }
+import IpsumList from './components/IpsumList.vue';
+
+export default {
+    
+    components: {
+        IpsumList
+    }
+};
+
 </script>
 
 <style>
