@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>List of Ipsums</h1>
+    <h1>List of Ipsums ({{list.length}})</h1>
     <ul>
       <li></li>
     </ul>
@@ -8,7 +8,14 @@
 </template>
 
 <script>
-export default {
+import ipsums from '../ipsums.js';
 
+export default {
+  data() {
+    return {
+      list: ipsums
+    }
+
+  }
 };
 </script>

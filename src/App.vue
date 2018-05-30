@@ -6,7 +6,6 @@
     <main>
         <section class="list">
             <IpsumList/>
-            list section
         </section>
         <section class="viewer">
             viewer section
