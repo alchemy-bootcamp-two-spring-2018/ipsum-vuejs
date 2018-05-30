@@ -52,6 +52,7 @@ export default {
   background: lavender;
   overflow-y: auto;
 }
+
 .viewer {
   height: 80%;
   overflow: auto;

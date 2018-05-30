@@ -42,12 +42,15 @@ li {
   padding: 5px;
   cursor: pointer;
 }
+
 .ipsumItem.selected {
   background: white;
 }
+
 .ipsumItem.selected:hover {
   background: lavenderblush;
 }
+
 .ipsumItem:hover {
   background: lightcyan;
 }
