@@ -5,7 +5,10 @@
     </header>
     <main>
       <section class="list">
-        <Pokemon-list/>
+        <Pokemon-list
+          v-bind:selected="selected"
+          v-on:select="updateSelected"
+        />
       </section>
       <section class="viewer">
       </section>
@@ -45,6 +48,9 @@ export default {
 
 .list {
   float: left;
-  /* max-width: 30%; */
+  float: left;
+  overflow-y: auto;
+  height: 700px;
+  max-width: 30%;
 }
 </style>
