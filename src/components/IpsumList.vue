@@ -8,7 +8,7 @@
       v-bind:key="importedItem.id"
       v-on:click="$emit('select', importedItem)"
       >
-      <article v-bind:class="['ipsum', { selected: selected === importedItem }]">
+      <article v-bind:class="['ipsum', { selected: importedList === selected }]">
         {{importedItem.title}}</article> <!-- might need to wrap this in a span class -->
         </li>
         </ul>
