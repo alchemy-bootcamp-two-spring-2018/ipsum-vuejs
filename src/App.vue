@@ -46,6 +46,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 60px;
+  padding-left: 20px;
 }
 
 main {
@@ -56,6 +57,7 @@ main {
 
 .list {
   border: 1px solid blue;
+  width: 250px;
 }
 
 .viewer {

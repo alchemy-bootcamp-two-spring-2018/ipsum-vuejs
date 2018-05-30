@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 div {
-  padding: 10px;
+  padding: 15px;
 }
 
 ul {
