@@ -1,28 +1,28 @@
 <template>
 <div>
-  <h1>Lorem Ipsum Selector</h1>
-  <h2>Choose from {{ipsum.length}} options!</h2>
+  <h3>Lorem Ipsum Selector</h3>
+  <h2>Choose from {{importedList.length}} options!</h2>
   <ul>
     <li 
-      v-for="ipsum in ipsum"
-      v-bind:key = "ipsum.title"
-      v-on:click="$emit('select', title)"
+      v-for="importedItem in importedList"
+      v-bind:key="importedItem.id"
+      v-on:click="$emit('select', importedItem)"
       >
-      <article v-bind:class="['ipsum', { selected: title === selected }]">
-        {{ipsum.title}}</article> <!-- might need to wrap this in a span class -->
+      <article v-bind:class="['ipsum', { selected: selected === importedItem }]">
+        {{importedItem.title}}</article> <!-- might need to wrap this in a span class -->
         </li>
         </ul>
         </div>
         </template>
 
         <script>
-        import ipsum from '../ipsumData.js'
+        import ipsumList from '../ipsumData.js'
+        console.log(ipsumList);
 
 export default {
   data() {
     return {
-      ipsum: title
-
+      importedList: ipsumList
     }
   },
   props: ['selected']
@@ -70,6 +70,13 @@ img {
     display: block;
     margin: 10px;
     max-height: 300px;
+}
+
+.ipsum {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
 }
 
 

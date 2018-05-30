@@ -4,36 +4,41 @@
       <h1>Lorem Ipsum Selector</h1>
     </header>
     <main>
-<section class = "list">
+<section class="list">
   <IpsumList
-    v-bind:selected = "selected"
-    v-on:select= "updateSelected"
+    v-bind:selected="selected"
+    v-on:select="updateSelected"
     />
-    <section class = "viewer">
-      <IpsumViewer v-bind:ipsum="selected" />
+    </section>
+    <section class="viewer">
+      <IpsumViewer v-bind:importedItem = "selected" />
       </section>
     </main>
   </div>
 </template>
 
 <script>
-import IpsumList from './components/IpsumList.vue'
-import IpsumViewer from './components/IpsumViewer.vue'
+import IpsumList from './components/IpsumList.vue';
+import IpsumViewer from './components/IpsumViewer.vue';
 
 
 export default {
-  name: 'app',
-
+    data() {
+      return {
+          selected: null,
+          someHtml: '<strong>Hello</strong>'
+      };
+    },
   components: {
     IpsumList,
     IpsumViewer
   },
   methods: {
-    updateSelected(ipsum) {
-      this.selected = ipsum;
+    updateSelected(title) {
+      this.selected = title;
     }
   }
-}
+};
 </script>
 
 <style>
