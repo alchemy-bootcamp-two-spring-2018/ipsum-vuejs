@@ -12,7 +12,7 @@
         />
       </section>
       <section class="viewer">
-        <IpsumViewer v-bind:impsum="selected"/>
+        <IpsumViewer v-bind:ipsum="selected"/>
       </section>
     </main>
   </div>

@@ -1,8 +1,11 @@
 <template>
   <div>
-    <article class="ipsum-detail" v-if="ipsum">
-      <h3>{{ipsum.pokemon}}</h3>
-      <img v-bind:src="pokemon.url_image">
+    <article v-if="ipsum">
+      <h3>{{ipsum.title}}</h3>
+      <ul>
+          <li> {{ipsum.author}} </li>
+          <li v-html='ipsum.body'> </li> 
+      </ul>
     </article>
     <p v-else>Please select an ipsum</p>
   </div>
@@ -11,6 +14,7 @@
 <script>
 
 export default {
+    data: {foo: 'foo'},
   props: ['ipsum']
 };
 
@@ -19,9 +23,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.pokemon-detail {
+/* .ipsum-detail {
   padding: 10px;
   text-align: center;
-}
+} */
 
 </style>

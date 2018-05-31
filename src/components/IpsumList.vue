@@ -4,13 +4,12 @@
     <ul>
       <li 
         v-for="ipsum in list"
-        v-bind:key="ipsum.id"
+        v-bind:key="ipsum.title"
         v-on:click="$emit('select', ipsum)"
       >
         <article v-bind:class="['ipsum', { selected: ipsum === selected }]">
-          <img v-bind:src="pokemon.url_image">
-          <span v-bind:style="{ color: pokemon.color_1 }">
-            {{ipsum.title}}
+          <span>    
+            {{ipsum.title, ipsum.author}}
           </span>
         </article>
       </li>
@@ -19,7 +18,7 @@
 </template>
 
 <script>
-import ipsum from './ipsum.js';
+import ipsum from './../ipsum.js';
 
 export default {
   data() {
