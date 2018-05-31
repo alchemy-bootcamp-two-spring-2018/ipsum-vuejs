@@ -70,11 +70,11 @@ li {
 }
 
 .ipsum.selected:hover {
-    background: mediumturquoise;
+    background: lightsteelblue;
 }
 
 .ipsum:hover {
-    background: steelblue;
+    background: mediumturquoise;
 }
 </style>
 
