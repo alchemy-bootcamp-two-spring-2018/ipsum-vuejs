@@ -25,6 +25,7 @@ export default {
 
 h2 {
   text-align: center;
+  font-family: 'Nunito', sans-serif;
 }
 
 img {
@@ -33,6 +34,12 @@ img {
 
 h3 {
   text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+p {
+  font-size: 3em;
+  font-family: 'Nunito', sans-serif;
 }
 
 </style>

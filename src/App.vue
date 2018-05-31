@@ -13,7 +13,7 @@
         />
       </section>
       
-      <section class="detail-viewer">
+      <section class="detail-viewer" v-bind:class="[{selected: selected !== null}]">
         <PokemonViewer
         v-bind:pokemon="selected"
         />
@@ -44,7 +44,7 @@ export default {
   methods: {
     updateSelected(pokemon) {
       this.selected = pokemon;
-    }
+    } 
   }
 };
 
@@ -65,13 +65,25 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Stalinist One', cursive;
   font-size: 4em;
-  color: wheat;
+  color: ivory;
   background-image: url("background.jpg");
   background-size: cover;
   height: 2.5em;
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 30px 0px;
 
 }
 
+.list {
+  border-top: solid;
+  border-bottom: solid;
+}
+
+.detail-viewer.selected {
+  border-style: solid;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: blanchedalmond;
+}
 </style>

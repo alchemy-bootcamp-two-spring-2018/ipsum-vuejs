@@ -1,7 +1,7 @@
 <template>
   <div class="pokemon-list">
     
-    <h2>Pokemon List [{{list.length}}]</h2>
+    <h2>Pokemon List - {{list.length}}</h2>
     
     <ul>
       <li 
@@ -38,12 +38,21 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+h2 {
+  font-family: 'Nunito', sans-serif;
+}
+
 .pokemon {
   cursor: pointer;
 }
 
 .pokemon:hover {
-  background: wheat;
+  background: blanchedalmond;
+  padding-left: 5px;
+}
+
+.pokemon.selected {
+  background: lightgrey;
   padding-left: 5px;
 }
 
