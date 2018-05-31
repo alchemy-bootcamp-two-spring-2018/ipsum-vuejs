@@ -4,15 +4,15 @@
       <h1>Lorem Ipsum Selector</h1>
     </header>
     <main>
-<section class="list">
-  <IpsumList
-    v-bind:selected="selected"
-    v-on:select="updateSelected"
-    />
+    <section class="list">
+      <IpsumList
+      v-bind:selected="selected"
+      v-on:select="updateSelected"
+      />
     </section>
     <section class="viewer">
       <IpsumViewer v-bind:importedItem = "selected" />
-      </section>
+    </section>
     </main>
   </div>
 </template>
@@ -25,8 +25,8 @@ import IpsumViewer from './components/IpsumViewer.vue';
 export default {
     data() {
       return {
-          selected: null,
-          someHtml: '<strong>Hello</strong>'
+        selected: null,
+        someHtml: '<strong>Hello</strong>'
       };
     },
   components: {
@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     updateSelected(title) {
-      this.selected = title;
+    this.selected = title;
     }
   }
 };
@@ -68,7 +68,6 @@ img {
  max-width: 300px;
  display: block;
  margin: 20px;
-
 }
 
 </style>
