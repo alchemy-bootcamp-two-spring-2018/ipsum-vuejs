@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       selected: null,
-      someHtml: '<strong>hello</strong>'
+  
     }
   },
   components: {

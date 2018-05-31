@@ -5,7 +5,7 @@
       <li 
           v-for="ipsum in ipsumList"
           v-bind:key="ipsum.title"
-          v-on:click="$emit('selected', ipsum)"
+          v-on:click="$emit('select', ipsum)"
           v-bind:class="['ipsum', { selected: ipsum === selected }]"
       >
       {{ ipsum.title }}
@@ -28,6 +28,10 @@ export default {
 <style>
 h1 {
   padding: 10px 20px;
+}
+
+.ipsum {
+  cursor: pointer;
 }
 
 
