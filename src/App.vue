@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <h1>Ipsum Viewer</h1>
+      <h1>Lorem Ipsum Viewer</h1>
       
     </header>
     <main>

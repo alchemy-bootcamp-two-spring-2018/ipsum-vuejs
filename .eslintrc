@@ -11,6 +11,9 @@
     "browser": true,
     "es6": true
   },
+  "plugins": [
+    "html"
+  ],
   "rules": {
     "eqeqeq": ["error", "always"],
     "no-console": "off",

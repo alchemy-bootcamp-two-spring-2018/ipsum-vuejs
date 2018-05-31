@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>List of Ipsums</h1>
+    <h1>List of Ipsums ({{ list.length }})</h1>
     <ul>
       <li
         v-for="ipsum in list"

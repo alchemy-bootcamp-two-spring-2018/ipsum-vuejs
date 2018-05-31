@@ -7,8 +7,9 @@
         <li>Category: {{ipsum.category}}</li>
         <li>Author Url: {{ipsum.authorUrl}}</li>
         <li>Published on: {{ipsum.publishedOn}}</li>
-        <li>Sample Text: {{ipsum.body}}</li>
+        <li v-html="ipsum.body">Text: {{ipsum.body}}</li>
       </ul>
+      
     </section>
     <p v-else>Please select an Ipsum</p>
   </div>
@@ -27,5 +28,7 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-
+img {
+  display: none;
+}
 </style> 
