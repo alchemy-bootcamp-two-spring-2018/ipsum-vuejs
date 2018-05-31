@@ -26,7 +26,7 @@ App
 
 * `App` 
     * owns the "selected" state (initially `null`), which is passed to both `IpsumList` and `IpsumViewer`
-    * subsribes to `IpsumList` event `select`. Updates the selected state.
+    * subscribes to `IpsumList` event `select`. Updates the selected state.
     * displays the two child components, passes `selected` prop to `IpsumViewer`
 * `IpsumList`
     * Owns the "ipsum list" state (initially import of `js/data.js`) which it returns from `data() {}`
