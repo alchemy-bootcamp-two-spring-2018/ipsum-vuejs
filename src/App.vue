@@ -2,12 +2,13 @@
   <div id="app">
     <header>
       <h1>Ipsum Viewer</h1>
+      
     </header>
     <main>
       <section class="ipsum-list">
         <IpsumList
           v-bind:selected="selected"
-          v-on:selected="updateSelected"
+          v-on:select="updateSelected"
         />
       </section>
       <section class="ipsum-viewer">
@@ -32,6 +33,11 @@ export default {
   components: {
     IpsumList,
     IpsumViewer
+  },
+  methods: {
+    updateSelected(ipsum) {
+      this.selected = ipsum;
+    }
   }
 }
 </script>
@@ -44,6 +50,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.ipsum-list {
+  background: lightgray;
+  float: left;
 }
 </style>
 

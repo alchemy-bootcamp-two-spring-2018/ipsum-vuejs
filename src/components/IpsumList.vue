@@ -5,9 +5,9 @@
       <li
         v-for="ipsum in list"
         v-bind:key="ipsum.title"
-        v-on:click="$emit('selected', ipsum)"
+        v-on:click="$emit('select', ipsum)"
       >
-        <section v-bind:class="['ipsum', {selected: ipsum === selected}]">
+        <section v-bind:class="['ipsum', { selected: ipsum === selected }]">
           <span>{{ipsum.title}}</span>
         </section>
       </li>
@@ -21,7 +21,7 @@ import ipsum from '../ipsums.js'
 export default {
   data() {
     return {
-      list: ispum
+      list: ipsum
     }
   },
   props: ['selected']
@@ -30,7 +30,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -38,5 +37,19 @@ ul {
 li {
   margin: 0 10px;
 }
-
+.ipsum {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+.ipsum.selected {
+  background: white;
+}
+.ipsum.selected:hover {
+  background: aquamarine;
+}
+.ipsum:hover {
+  background: aquamarine;
+}
 </style> 
