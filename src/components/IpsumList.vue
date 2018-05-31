@@ -11,17 +11,17 @@
 
           <article v-bind:class="['ipsum', { selected: ipsum === selected }]">
 
-              <span v-bind:style="{ ????? }">
-                  {{ipsum.ipsum}}
+              <span>
+                  {{ipsum.title}}
             </span>
           </article>
-
+        </li>
       </ul>
   </div>  
 </template>
 
 <script>
-import ipsum from '../ipsums.js';
+import ipsum from '../data/ipsums.js';
 
 export default {
     data() {
