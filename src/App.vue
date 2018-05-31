@@ -33,7 +33,6 @@ export default {
   },
   methods: {
     updateSelected(selected) {
-      console.log('jhhhkgkhj');
       this.selected = selected;
     }
   }
@@ -43,13 +42,15 @@ export default {
 <style>
 #main {
   display: flex;
-  justify-content: space-between;
-  text-shadow: 0 0 33px cyan;
+  justify-content: space-around;
+  align-items: center;
+  text-shadow: 0 0 33px white;
   word-wrap: normal;
 }
 
 h1 {
   text-align: center;
+  text-shadow: 1px 1px 3px black;
   color: white;
 }
 
