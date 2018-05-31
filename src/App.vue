@@ -68,7 +68,7 @@ h1 {
   font-family: 'Stalinist One', cursive;
   font-size: 4em;
   color: ivory;
-  background-image: url("background.jpg");
+  background-image: url("./assets/background.jpg");
   background-size: cover;
   height: 2.5em;
   margin: 0px 0px 30px 0px;
