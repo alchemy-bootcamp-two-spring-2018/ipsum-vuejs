@@ -26,12 +26,18 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Neuton');
 h1 {
   padding: 10px 20px;
 }
 
 .ipsum {
   cursor: pointer;
+}
+
+li:hover {
+  color: antiquewhite;
+  background-color: #9e0470;
 }
 
 
