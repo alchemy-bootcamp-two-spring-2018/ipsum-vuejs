@@ -9,7 +9,7 @@
       <section class="list">
         <IpsumList
           v-bind:selected="selected"
-          v-on:selected="updateSelected"
+          v-on:select="updateSelected"
           />
       </section>
       

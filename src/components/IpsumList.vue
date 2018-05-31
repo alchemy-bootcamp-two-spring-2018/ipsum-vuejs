@@ -1,22 +1,19 @@
 <template>
-  <div>
+  <div> 
     <h1>List of Ipsum ({{list.length}})</h1>
     <ul>
       <li 
         v-for="ipsum in list"
         v-bind:key="ipsum.title"
         v-on:click="$emit('select', ipsum)"
-        v-bind:class="['ipsum', { selected: selected === ipsum }]"
-      >
-          <div v-bind:src="ipsum.authorUrl"></div>
-          
-        
-        {{ipsum.title}}
+        v-bind:class="['ipsum', { selected: ipsum === selected }]">
+        <!-- <div v-bind:src="ipsum.authorUrl"></div> -->
+          {{ipsum.title}}
       </li>
     </ul>
   </div>
 </template>
-
+    
 <script>
 import ipsum from './ipsum.js';
 export default {
