@@ -43,7 +43,8 @@ export default {
 }
 
 .pokemon:hover {
-  background: whitesmoke;
+  background: wheat;
+  padding-left: 5px;
 }
 
 ul {

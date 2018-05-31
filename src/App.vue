@@ -54,6 +54,7 @@ export default {
 
 body {
   margin: 0px;
+  background-color: whitesmoke;
 }
 main {
   display: flex;
@@ -70,6 +71,7 @@ h1 {
   background-size: cover;
   height: 2.5em;
   margin: 0px 0px 10px 0px;
+
 }
 
 </style>
