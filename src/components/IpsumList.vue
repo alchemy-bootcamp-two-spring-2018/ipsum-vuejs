@@ -33,16 +33,16 @@ export default {
 
 h1 {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 3em;
+font-size: 3.5em;
+}
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.9em;
+    color: rgba(0, 0, 0 , .5);
 }
 h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2.0em;
-    color: rgba(0, 0, 0 , .5);
-}
-h3{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2.0em;
+    font-size: 1.8em;
     color: rgba(0, 0, 0 , .7);
 
 }
@@ -50,7 +50,7 @@ h3{
 ul {
     list-style: none;
     padding: 4px;
-    line-height: 2.5em;
+    line-height: 1.9em;
     padding-left: 10px;
 }
 li {
@@ -66,11 +66,7 @@ p{
  font-family: sans-serif;
     font-size: 1.3em;
 }
-img {
-    display: block;
-    margin: 10px;
-    max-height: 300px;
-}
+ 
 
 .ipsum {
   display: flex;

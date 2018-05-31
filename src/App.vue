@@ -42,8 +42,9 @@ export default {
 </script>
 
 <style>
-#app {
+h1 {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 2.5em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -62,6 +63,12 @@ export default {
   border: 1px solid black;
   min-height: 600px;
   padding: 10px;
+}
+img {
+ max-width: 300px;
+ display: block;
+ margin: 20px;
+
 }
 
 </style>

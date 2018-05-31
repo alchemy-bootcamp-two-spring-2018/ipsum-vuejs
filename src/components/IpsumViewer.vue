@@ -62,9 +62,11 @@ p{
     font-size: 1.3em;
 
 }
-.block img {
+img {
     display: block;
-    margin: 10px;
+    border: 2px solid red;
+    clear: both;
+    margin: 20px;
     width: 300px;
 }
 </style>
