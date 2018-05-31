@@ -1,0 +1,1 @@
+## Vue app to show ipsum info upon select.
