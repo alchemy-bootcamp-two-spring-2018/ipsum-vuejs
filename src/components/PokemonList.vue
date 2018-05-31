@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Pokémon Captured: {{list.length}} </h1>
+        <h2>Pokémon Captured: {{list.length}} </h2>
         <ul>
             <li
                 class="listItems"
@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .pokemon {
     cursor: pointer;
     display: flex;
@@ -40,7 +40,7 @@ export default {
 
 }
 .pokemon img {
-    display: block;
+
     width: 75px;
     margin-right: 5px;
     
@@ -51,5 +51,10 @@ export default {
 .pokemonName {
     font-weight: bold;
 }
-
+.pokemon.selected {
+  background: rgb(252, 176, 69);
+}
+.pokemon:hover {
+  background: rgb(240, 227, 209);
+}
 </style>

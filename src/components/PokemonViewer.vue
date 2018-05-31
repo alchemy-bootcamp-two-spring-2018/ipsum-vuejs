@@ -1,7 +1,7 @@
-<template>
+<template class="mainViewer">
     <div>
-        <article class="mainViewer" v-if="pokemon">
-            <img v-bind:src="pokemon.url_image">
+        <article v-if="pokemon">
+            <img class="pokemonImage" v-bind:src="pokemon.url_image">
             <h2>{{pokemon.pokemon.toUpperCase()}}</h2>
             <p>Types: {{pokemon.type_1.toUpperCase()}}, {{pokemon.type_2.toUpperCase()}}</p>
             <p>HP: {{pokemon.hp}}</p>
@@ -9,7 +9,7 @@
             <p>Defense: {{pokemon.defense}}</p>
             <a v-bind:href="pokemon.pokedex">More Info at Pokémon.com!</a>
         </article>
-        <p v-else>Welcome Trainer! Please Choose a Pokémon.</p>
+        <span class="startText" v-else>Welcome Trainer! Please Choose a Pokémon.</span>
     </div>
 </template>
 
@@ -21,13 +21,31 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 .mainViewer {
-text-align: center;    
+    text-align: center; 
+    float: left;
 }
 
-.mainViewer img {
+.pokemonImage {
     width: 400px;
-    /* opacity: 50%; */
+    opacity: 0.7;
 }
+
+p {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+a {
+    font-weight: bold;
+    font-size: 15px;
+}
+.startText {
+    display: flex;
+    margin-top: 200px;
+    font-weight: bold;
+    font-size: 50px;
+}
+    
 </style>
