@@ -36,14 +36,17 @@ export default {
 <style scoped>
 
 h3 {
+    font-size: 18px;
     text-align: center;
-    background-color:lemonchiffon;
+    text-decoration-color: maroon;
+    text-decoration-line: overline;
+    background-color: #fbead1;
     margin-top: 0px;
-    margin-right: 100px;
-    margin-left: 100px;
-    padding-top: 10px;
+    margin-right: 160px;
+    margin-left: 160px;
+    padding-top: 0px;
     padding-bottom: 10px;
-
+    border-radius: 0px 0px 20px 20px;
 }
 
 ul {
@@ -54,7 +57,8 @@ ul {
 li {
     margin: 0 20px;
     width: fit-content;
-    display: inline-block;   
+    display: inline-block; 
+    font-weight:500;  
 }
 
 .ipsum {

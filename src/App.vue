@@ -45,16 +45,18 @@ export default {
 
 <style>
 body {
-  background-color: rgba(241, 108, 85, 0.769);
+  background-color: #67a8a3;
 }
 
 h1 {
+  font-size: 50px;
   text-align: center;
-  background-color:lemonchiffon;
+  background-color:#fbead1;
   margin-bottom: 0px;
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-right: 160px;
+  margin-left: 160px;
   padding-top: 10px;
+  border-radius: 20px 20px 0px 0px;
 }
 
 #app {

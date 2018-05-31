@@ -8,8 +8,7 @@
             <h4>Published On:{{ipsum.publishedOn}}</h4>
             <span v-html="ipsum.body"></span>
         </article>
-        <p id="pick" v-else>Please select an ipsum!</p>
-
+            <p id="pick" v-else>Please select an ipsum!</p>
     </div>
 </template>
 
@@ -28,6 +27,8 @@ export default {
     text-align: center;
     margin-right: 120px;
     margin-left: 120px;  
+    background-color: #fceaea;
+    border-radius: 20px;
 }
 
 #pick {
