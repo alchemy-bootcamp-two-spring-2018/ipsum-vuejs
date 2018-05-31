@@ -28,7 +28,4 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-img {
-  display: none;
-}
 </style> 

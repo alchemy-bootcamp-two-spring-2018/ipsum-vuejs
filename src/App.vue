@@ -66,5 +66,9 @@ export default {
   border: 10px solid lightgray;
   margin-right: 10px;
 }
+
+img {
+  display: none;
+}
 </style>
 
