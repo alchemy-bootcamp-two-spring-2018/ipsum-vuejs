@@ -64,6 +64,7 @@ export default {
   overflow: auto;
   padding: 3%;
   border: 10px solid lightgray;
+  margin-right: 10px;
 }
 </style>
 

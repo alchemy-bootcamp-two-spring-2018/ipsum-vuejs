@@ -11,7 +11,7 @@
       </ul>
       
     </section>
-    <p v-else>Please select an Ipsum</p>
+    <p v-else>Please select an ipsum to preview</p>
   </div>
 </template>
 
