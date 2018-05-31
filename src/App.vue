@@ -54,7 +54,16 @@ export default {
 
 .ipsum-list {
   background: lightgray;
+  padding: 1%;
   float: left;
+}
+
+.ipsum-viewer {
+  object-fit: contain;
+  height: 671px;
+  overflow: auto;
+  padding: 3%;
+  border: 10px solid lightgray;
 }
 </style>
 

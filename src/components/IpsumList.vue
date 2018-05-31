@@ -32,7 +32,7 @@ export default {
 <style scoped>
 ul {
   list-style-type: none;
-  padding: 0;
+  padding: 3%;
 }
 li {
   margin: 0 10px;
