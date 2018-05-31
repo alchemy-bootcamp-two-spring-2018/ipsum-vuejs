@@ -1,6 +1,6 @@
 <template>  
   <div>
-      <h1>List o' Ipsums</h1>
+      <h3>Earth's Hottest Ipsums</h3>
       <ul>
           <li
             v-for="ipsum in list"
@@ -35,23 +35,34 @@ export default {
 
 <style scoped>
 
+h3 {
+    text-align: center;
+    background-color:lemonchiffon;
+    margin-top: 0px;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
 ul {
     list-style: none;
-    padding: 0;
+    padding: 60;
 }
 
 li {
-    margin: 0 14px;
+    margin: 0 20px;
+    width: fit-content;
+    display: inline-block;   
 }
 
 .ipsum {
-    display: flex;
-    align-items: center;
     padding: 8px;
 }
 
 .ipsum.selected {
-    background: lightblue;
+    background: lightblue; 
 }
 
 .ipsum.selected:hover {
