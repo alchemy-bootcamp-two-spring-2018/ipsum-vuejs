@@ -26,11 +26,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@keyframes selected-glow {
+  from {
+    background-position-x: 0;
+  } to {
+    background-position-x: 100%;
+  }
+}
+
 @keyframes glow {
   from {
-    background-position: 0 0;
+    background: cyan;
   } to {
-    background-position: 100% 50%;
+    background: steelblue;
   }
 }
 
@@ -38,7 +46,6 @@ li {
   padding: 3px;
   width: fit-content;
   border-radius: 3px;
-  background: linear-gradient(cyan, darkcyan);
   background-size: 200% 200%;
   animation: glow 1s alternate ease-in-out infinite;
   list-style: radial-gradient(cyan, darkcyan);
@@ -48,12 +55,13 @@ li:hover {
   background: cyan;
   cursor: pointer;
   font-weight: bold;
+  animation: none;
 }
 
 .selected {
   background: linear-gradient(270deg, darkgoldenrod, gold);
   background-size: 200% 200%;
-  animation: glow 1s alternate ease-in-out infinite;
+  animation: selected-glow 1s alternate ease-in-out infinite;
   list-style: radial-gradient(gold, darkgoldenrod);
 }
 
