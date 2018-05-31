@@ -2,7 +2,7 @@
   <div id="app">
     
     <header>
-      <h1>Pokemon Directory</h1>
+      <h1>Pokemon</h1>
     </header>
 
     <main>
@@ -12,14 +12,14 @@
           v-bind:selected="selected"
         />
       </section>
-
+      
       <section class="detail-viewer">
         <PokemonViewer
         v-bind:pokemon="selected"
         />
       </section>
     </main>
-
+  
   </div>
 
 </template>
@@ -52,12 +52,24 @@ export default {
 
 <style>
 
-h1 {
-  text-align: center;
+body {
+  margin: 0px;
 }
 main {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  color: wheat;
+  background-image: url("background.jpg");
+  background-size: cover;
+  height: 2.5em;
+  margin: 0px 0px 10px 0px;
 }
 
 </style>
