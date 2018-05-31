@@ -1,7 +1,8 @@
 <template>
 <div id="app">
     <header>
-        <h1> Ipsum Factum Viewer</h1>
+        <h1> Ipsum Factum</h1>
+    <hr>
     </header>
     <main>
         <section class="list">
@@ -42,6 +43,35 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
+header {
+    background: lightsteelblue;
+    margin: -8px;
+    padding-top: 10px;
+    font-size: 40px;
+    font-family: cursive;
+}
+h1 {
+    margin: 0px;
 
+}
+hr {
+    margin:3px;
+
+}
+.list {
+    float: left;
+    max-width: 300px;
+    background: rgba(176, 196, 222, 0.836);
+    text-align: center;
+    margin-left: -8px;
+}
+.viewer {
+
+    text-align: center;
+}
+#app {
+    text-align: center;
+    width: auto;
+}
 </style>
