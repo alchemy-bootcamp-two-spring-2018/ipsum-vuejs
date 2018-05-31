@@ -31,6 +31,12 @@ ul {
 p img {
   width: 200px;
 }
+img {
+  width: 200px;
+}
+.pull-left {
+  float: left;
+}
 
 p {
   text-align: justify;
