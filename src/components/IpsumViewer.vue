@@ -2,6 +2,14 @@
 <div>
   <article class="ipsum-detail" v-if="importedItem">
     <h3>{{importedItem.title}}</h3>
+ <ul>
+    <li>Author: {{importedItem.author}}</li>
+    <li>Author URL: {{importedItem.authorUrl}}</li>
+    <li>Category: {{importedItem.category}}</li>
+    </ul>
+    <p><strong>Example: </strong><br>
+    <span class="block" v-html="importedItem.body"></span></p>
+    ;
     </article>
     <p v-else>Please select an Ipsum!</p>
     </div>
@@ -54,9 +62,9 @@ p{
     font-size: 1.3em;
 
 }
-img {
+.block img {
     display: block;
     margin: 10px;
-    max-height: 300px;
+    width: 300px;
 }
 </style>
