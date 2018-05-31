@@ -65,6 +65,12 @@ export default {
   padding: 3%;
   border: 10px solid lightgray;
   margin-right: 10px;
+  text-align: left;
+}
+
+.ipsum-viewer h1 {
+  text-align: center;
+  font-size: 1.8em;
 }
 
 img {

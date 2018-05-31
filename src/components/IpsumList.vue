@@ -44,7 +44,7 @@ li {
   cursor: pointer;
 }
 .ipsum.selected {
-  background: white;
+  color: white;
 }
 .ipsum.selected:hover {
   background: aquamarine;
