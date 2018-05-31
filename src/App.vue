@@ -45,9 +45,9 @@ export default {
 
 <style scoped>
 header {
-    background: lightsteelblue;
+    background: rgb(154, 171, 194);
     margin: -8px;
-    padding-top: 10px;
+ 
     font-size: 40px;
     font-family: cursive;
 }
@@ -61,17 +61,18 @@ hr {
 }
 .list {
     float: left;
-    max-width: 300px;
-    background: rgba(176, 196, 222, 0.836);
+
+    background: rgba(152, 170, 192, 0.836);
     text-align: center;
     margin-left: -8px;
 }
 .viewer {
-
-    text-align: center;
+    width: 101%;
 }
 #app {
     text-align: center;
     width: auto;
+    color: white;
+    
 }
 </style>

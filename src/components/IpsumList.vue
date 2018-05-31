@@ -9,8 +9,12 @@
       v-on:click="$emit('select', ipsums)"
       >
         <article v-bind:class="['ipsums', { selected: ipsums === selected }]">
-          <strong>{{ipsums.author}}</strong>: 
+          <img v-bind:src="ipsums.image"
+            class="icon">
+            <div id="list-text">
+          <strong>{{ipsums.author}}</strong>:
           <em>{{ipsums.title}}</em>
+          </div>
         </article>
       </li>
     </ul>
@@ -33,6 +37,10 @@ export default {
   h1 {
     margin-bottom: 0px;
   }
+  #list-text {
+    margin-left: 5px;
+    margin-right: 3px;
+  }
   hr {
     margin-bottom: 0px;
   }
@@ -41,19 +49,21 @@ export default {
   }
   ul {
     list-style-type: none;
-    width: 290px;
     padding-left: 2px;  
-    height: 600px;;
+    height: 590px;;
     scroll-behavior: smooth;
     overflow-y: auto;
     margin-top: 0px;
     margin-bottom: 2px;
-    text-align: left;
+
   
   }
   article {
     padding-top: 5px;
     padding-bottom:5px;
+    display: flex;
+    align-items:center;
+
   }
   li:nth-child(odd) {
     background: rgb(200, 210, 223);
@@ -62,5 +72,7 @@ export default {
     cursor: pointer;
     background-color: lightcyan;
   }
-
+  .icon {
+    width: 50px;
+  }
 </style>
