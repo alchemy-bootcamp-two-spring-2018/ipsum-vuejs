@@ -19,8 +19,6 @@
     
 <script>
 import ipsum from './ipsum.js';
-
-
 export default {
   data() {
     return { 
@@ -30,10 +28,26 @@ export default {
   props: ['selected']
 };
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+div {
+    background-color: lightblue;
+    
+}
+h1 {
+  font-size: 20pt;
+    text-align: center;
+    background-color: coral;
+    width: 300px;
+    height: 40px;
+    margin: auto;
+     
+    border-radius: 30px 30px 30px 30px
+}
 h3 {
+  display: flex;
+  text-align: center;
   margin: 40px 0 0;
 }
 ul {
@@ -53,13 +67,16 @@ a {
   cursor: pointer;
 }
 .ipsum.selected {
-  background: antiquewhite;
+  background:aqua;
+   border-radius: 20px 20px 20px 20px
 }
 .ipsum.selected:hover {
-  background: wheat;
+  background: aquamarine;
+   border-radius: 20px 20px 20px 20px
 }
 .ipsum:hover {
-  background: steelblue;
+  background: aquamarine;
+  border-radius: 20px 20px 20px 20px
 }
 .ipsum img {
   width: 75px;

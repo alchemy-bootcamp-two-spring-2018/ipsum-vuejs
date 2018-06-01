@@ -5,7 +5,6 @@
       <p v-html="someHtml"></p>
     </header>
 
-
     <main>
       <section class="list">
         <IpsumList
@@ -45,5 +44,21 @@ export default {
   }
 };
 </script>
-
-
+<style>
+h1 {
+  font-size: 30pt;
+  text-align: center;
+  width: 300px;
+  height: 40px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 30px 30px 30px 30px
+}
+p {
+  
+  text-align: center;
+  height: 40px;
+  margin: auto;
+  border-radius: 30px 30px 30px 30px
+}
+</style>

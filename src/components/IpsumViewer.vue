@@ -6,30 +6,33 @@
                 <li> {{ipsum.author}} </li>
                 <li v-html='ipsum.body'> </li>
             </ul>
-                
-            <!-- <div v-bind:src="ipsum.authorUrl"></div> -->
-            <!-- <div>
-            </div> -->
-
         </article>
-        <p v-else>Please select an ipsum</p>
+        <p v-else> <strong>Please select an ipsum</strong></p>
     </div>
 </template>
 
 <script>
 export default {
     props: ['ipsum']
-
 };
-
 </script>
 
 <style scoped>
-.ipsum-detail {
-
-padding: 10px;
-text-align: center;
-
+p {
+    font-size: 20pt;
+    text-align: center;
+    background-color: orangered;
+    width: 300px;
+    height: 40px;
+    margin: auto;
+    border-radius: 30px 30px 30px 30px
+    
 }
-
+.ipsum-detail {
+background-color: aqua;
+text-align: center;
+border: black;
+border-width: 5px;
+border-radius: 30px 30px 30px 30px
+}
 </style>
