@@ -5,11 +5,12 @@
       <p v-html="someHtml"></p>
     </header>
 
+
     <main>
       <section class="list">
         <IpsumList
           v-bind:selected="selected"
-          v-on:select="updateSelected"
+          v-on:selected="updateSelected"
           />
       </section>
       
@@ -30,7 +31,7 @@ export default {
   data() {
     return {
       selected: null,
-      someHtml: '<strong>hello</strong>'
+      someHtml: '<strong>Hello! Pick an Ipsum!</strong>'
     }
   },
   components: {
@@ -38,7 +39,7 @@ export default {
     IpsumViewer
   },
   methods: {
-    updatedSelected(ipsum) {
+    updateSelected(ipsum) {
       this.selected = ipsum;
     }
   }

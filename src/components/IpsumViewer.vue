@@ -2,10 +2,14 @@
     <div>
         <article class="ipsum-detail" v-if="ipsum">
             <h3>{{ipsum.title}}</h3>
+            <ul>
+                <li> {{ipsum.author}} </li>
+                <li v-html='ipsum.body'> </li>
+            </ul>
+                
             <!-- <div v-bind:src="ipsum.authorUrl"></div> -->
-            <div>
-                {{ipsum.author}}
-            </div>
+            <!-- <div>
+            </div> -->
 
         </article>
         <p v-else>Please select an ipsum</p>
