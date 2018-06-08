@@ -45,6 +45,11 @@ export default {
 };
 </script>
 <style>
+p {
+  text-align: center;
+  margin: auto;
+  border-radius: 30px 30px 30px 30px
+}
 h1 {
   font-size: 30pt;
   text-align: center;
@@ -52,13 +57,6 @@ h1 {
   height: 40px;
   margin: auto;
   padding: 30px;
-  border-radius: 30px 30px 30px 30px
-}
-p {
-  
-  text-align: center;
-  height: 40px;
-  margin: auto;
   border-radius: 30px 30px 30px 30px
 }
 </style>
